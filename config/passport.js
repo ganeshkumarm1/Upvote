@@ -1,7 +1,7 @@
 var GoogleStrategy = require('passport-google-oauth2').Strategy;
 
 // load up the user model
-var User = require('../models/user');
+var User = require('../models/User');
 
 // load the auth variables
 var configAuth = require('./auth');
@@ -59,7 +59,6 @@ module.exports = function(passport) {
                     newUser.name  = profile.displayName;
                     newUser.email = profile.emails[0].value; // pull the first email
 
-                    console.log(profile);
                     // save the user
                     newUser.save(function(err) {
                         if (err)
