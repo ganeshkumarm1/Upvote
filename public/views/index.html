@@ -17,16 +17,22 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-		<nav class="navbar navbar-inverse">
+		<!--<nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">Upvote</a>
+              <a class="navbar-brand" href="/"><img src="/public/img/background_white.png" alt="" class="img-responsive"></a>
             </div>
           </div>
         </nav>
-        <a href="/users/google/oauth2">Google +</a>
+    -->
+        <section id="index" class="container-fluid">
+            <img src="/public/img/background_white.png" alt="" class="img img-responsive">
+            <p id="quote">THE RIGHT DECISION</p>
+            <a href="/users/google/oauth2"><button id="google-plus" class="btn btn-danger"><span class="fa fa-google-plus"></span>&nbsp;&nbsp; Login with Google</button></a>
+        </section>
         <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
         <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+        <script typ="text/javascript" src="/public/js/index.js"></script>
     </body>
 </html>

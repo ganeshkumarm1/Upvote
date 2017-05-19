@@ -15,8 +15,12 @@ var index = require('./routes/IndexRouter');
 var users = require('./routes/UsersRouter');
 var home = require('./routes/HomeRouter');
 var polls = require('./routes/PollsRouter');
+var vote = require('./routes/VoteRouter');
 
 var app = express();
+
+app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, '/public/views'));
 
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.use('/public', express.static(__dirname + '/public'));
@@ -30,6 +34,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+    secret: '1234567890',
+    resave: true,
+    saveUninitialized: true,
+  }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -37,6 +47,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/home', home);
 app.use('/polls', polls);
+app.use('/vote', vote);
 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

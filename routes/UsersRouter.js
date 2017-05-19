@@ -1,5 +1,7 @@
 var express = require('express');
 var passport = require('passport');
+var path = require('path');
+
 var usersRouter = express.Router();
 
 var verify = require('../common/verify');
@@ -12,10 +14,18 @@ usersRouter.get('/google/oauth2/callback',
         failureRedirect : '/'
 }));
 
-usersRouter.get('/returnToken', (req, res) => {
-	var token = verify.getToken(req.user);
-	res.status(200).json({token: token});
-});
+usersRouter.route('/returnToken')
+	.get((req, res, next) => {
+		if(req.user)
+		{
+			var token = verify.getToken(req.user);
+			res.render('token', {token: token});
+		}
+		else
+		{
+			res.redirect('/');
+		}
+	});
 
 usersRouter.get('/logout', (req, res) => {
 	req.logout();

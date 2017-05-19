@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var Poll = new Schema({
 	pollID: String,
 	question: String,
-	options: [String],
+	pollOptions: [{option: String, votes: Number}],
 	createdBy: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User'

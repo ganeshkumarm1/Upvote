@@ -37,7 +37,7 @@ module.exports = function(passport) {
     },
     function(token, refreshToken, profile, done) {
         // make the code asynchronous
-        console.log(profile);
+
         // User.findOne won't fire until we have all our data back from Google
         process.nextTick(function() {
             

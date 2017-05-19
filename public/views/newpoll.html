@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/public/css/common.css">
+
+        <link rel="import" href="/public/views/nav.html">
+
+       
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <header id="header"></header>
+        <section id="newpoll" class="container-fluid" style="transform: translateY(20px);">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sx-12">
+                   <form class="form" method="POST" id="newpoll-form">
+                      <div class="form-group">
+                        <label for="Title">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter a title" required="true">
+                      </div>
+                      <div class="form-group">
+                        <label for="options">Options (separated by comma)</label>
+                        <textarea name="options" id="options" name="options" class="form-control" cols="30" rows="10" required="true"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Create</button>    
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
+        <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/public/js/common.js"></script>
+        <script type="text/javascript" src="/public/js/newpoll.js"></script>
+    </body>
+</html>

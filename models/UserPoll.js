@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UserPoll = new Schema({
-	usedID: {
+	userID: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User'
 	},
@@ -16,4 +16,5 @@ var UserPoll = new Schema({
 		timestamps: true
 	}
 );
+
 module.exports = mongoose.model('UserPoll', UserPoll);

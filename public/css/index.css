@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+	background: #24292E;
+}
 .navbar {
+	border-color: #24292E;
 	border-radius: 0;
+	background: #24292E;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#index {
+	transform: translateY(90px);
+}
+#index img {
+	margin: 0px auto;
+	display: block;
+}
+
+.navbar-brand img {
+	height: 50px;
+}
+
+#google-plus {
+	margin: 0px auto;
+	display: block;
+	padding: 10px 20px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#quote {
+	color: #fff;
+	font-family: 'Ubuntu';
+	text-align: center;
+	font-size: 17px;
+	transform:  translateY(-40px);
 }
