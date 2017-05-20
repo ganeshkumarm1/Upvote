@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "body-parser": "~1.17.1",
+    "bower": "^1.8.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "dotenv": "^4.0.0",
@@ -19,5 +20,11 @@
     "passport": "^0.3.2",
     "passport-google-oauth2": "^0.1.6",
     "serve-favicon": "~2.4.2"
-  }
+  },
+  "dependencies": {
+    "bower": "1.8.0"
+},
+"scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+}
 }
