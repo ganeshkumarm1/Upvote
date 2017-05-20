@@ -46,7 +46,6 @@ function getPanel(poll, div)
 								<input class="pollID" type="hidden" value="${poll.pollID}" />
 								${Select}
 								<button type="submit" class="btn btn-success btn-block"><i class="fa fa-hand-o-up"></i> Vote</button>
-								<button type="button" class="btn btn-primary btn-block share"><i class="fa fa-twitter"></i> Share on Twitter</button>
 								${deleteButton}
 							</form>
     					</div>

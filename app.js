@@ -55,6 +55,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+console.log(process.env.MONGOURL);
 mongoose.connect(process.env.MONGOURL, () => console.log('Connected to the database') );
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

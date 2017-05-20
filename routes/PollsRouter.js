@@ -43,7 +43,7 @@ pollsRouter.route("/mypolls")
 	});
 
 pollsRouter.route("/:pollID")
-	.all(verify.verifyUser, (req, res, next) => next())
+	/*.all(verify.verifyUser, (req, res, next) => next())*/
 	.get((req, res, next) => {
 		Poll.findOne({pollID: req.params.pollID}, (err, poll) => {
 			if(err) throw err;
